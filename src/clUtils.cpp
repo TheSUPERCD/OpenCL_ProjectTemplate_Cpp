@@ -1,4 +1,3 @@
-#include <iostream>
 #include <fstream>
 #include <filesystem>
 #include <stdexcept>
@@ -170,4 +169,5 @@ const char *getCLErrorString(cl_int error) {
         default:                                    return "Unknown OpenCL error";
     }
 }
+
 

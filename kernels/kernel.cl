@@ -3,9 +3,9 @@
  * OpenCL C kernel for element-wise addition of two integer vectors.
  */
 
-__kernel void vector_add(__global const int *A,
-                         __global const int *B,
-                         __global int *C,
+__kernel void vector_add(__global const float *A,
+                         __global const float *B,
+                         __global float *C,
                          int num_elements)
 {
     // Get the unique global index for this work-item

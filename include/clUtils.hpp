@@ -2,6 +2,7 @@
 #ifndef CL_UTILS_HPP
 #define CL_UTILS_HPP
 
+#include <iostream>
 #include <vector>
 #include <string>
 #define CL_HPP_ENABLE_EXCEPTIONS
@@ -13,6 +14,16 @@ const char *getCLErrorString(cl_int error);
 
 // helper function to read OpenCL kernel source file
 const std::string readKernelSource(const std::string& source_path);
+
+// helper function to print arrays
+template <typename T>
+void printArray(T *arr, int arr_len){
+  std::cout << "[";
+  for(int i=0;i<arr_len-1;i++){
+    std::cout << arr[i] << ", ";
+  }
+  std::cout << arr[arr_len-1] << "]" << std::endl;
+}
 
 class clUtils {
 public:
